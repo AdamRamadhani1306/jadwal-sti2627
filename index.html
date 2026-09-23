@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jadwal Perkuliahan STI Semester 3 | ITEBIS PGRI Dewantara</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-grid"></div>
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-wrap">
+        <img src="logo-sti.jpeg" alt="Logo Sistem Teknologi Informasi" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-title">SISTEM</span>
+          <span class="logo-sub">Teknologi Informasi</span>
+          <span class="logo-inst">ITEBIS PGRI Dewantara Jombang</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="badge-label">TA Gasal</span>
+        <span class="badge-year">2026/2027</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">Prodi Sistem &amp; Teknologi Informasi · Semester 3</p>
+      <h1 class="hero-title">Jadwal<br /><span class="gradient-text">Perkuliahan</span></h1>
+      <p class="hero-desc" id="hero-desc">Angkatan 2025 · Kelas Reguler A · Semester Gasal 2026/2027</p>
+      <div class="hero-pills" id="hero-pills">
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>4 Hari Kuliah</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8 Mata Kuliah</span>
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>7 Dosen</span>
+      </div>
+    </div>
+    <div class="hero-circuit">
+      <svg viewBox="0 0 400 300" class="circuit-svg">
+        <g stroke="url(#grad1)" stroke-width="1.5" fill="none" opacity="0.35">
+          <line x1="50" y1="50" x2="350" y2="50"/>
+          <line x1="350" y1="50" x2="350" y2="250"/>
+          <line x1="50" y1="250" x2="350" y2="250"/>
+          <line x1="50" y1="50" x2="50" y2="250"/>
+          <line x1="200" y1="50" x2="200" y2="150"/>
+          <line x1="50" y1="150" x2="350" y2="150"/>
+          <line x1="130" y1="50" x2="130" y2="100"/>
+          <line x1="270" y1="150" x2="270" y2="250"/>
+          <line x1="130" y1="200" x2="130" y2="250"/>
+          <line x1="130" y1="100" x2="200" y2="100"/>
+          <circle cx="200" cy="150" r="5" fill="url(#grad1)" opacity="0.8"/>
+          <circle cx="130" cy="100" r="4" fill="url(#grad1)" opacity="0.8"/>
+          <circle cx="270" cy="150" r="4" fill="url(#grad1)" opacity="0.8"/>
+          <circle cx="50" cy="150" r="8" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+          <circle cx="350" cy="150" r="8" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+          <circle cx="200" cy="50" r="8" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+          <circle cx="200" cy="250" r="8" fill="none" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+        </g>
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#5b8cff"/>
+            <stop offset="100%" style="stop-color:#3730a3"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </section>
+
+  <!-- CLASS SWITCHER -->
+  <div class="class-switcher-wrap">
+    <div class="class-switcher-inner">
+      <span class="switcher-label">Pilih Kelas:</span>
+      <div class="class-switcher">
+        <button class="class-btn active" data-class="A">Kelas A</button>
+        <button class="class-btn" data-class="B">Kelas B</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <div class="filter-bar">
+    <div class="filter-inner" id="filter-inner-A">
+      <button class="filter-btn active" data-day="all">Semua Hari</button>
+      <button class="filter-btn" data-day="senin">Senin</button>
+      <button class="filter-btn" data-day="rabu">Rabu</button>
+      <button class="filter-btn" data-day="kamis">Kamis</button>
+      <button class="filter-btn" data-day="sabtu">Sabtu</button>
+    </div>
+    <div class="filter-inner" id="filter-inner-B" style="display:none">
+      <button class="filter-btn active" data-day="all">Semua Hari</button>
+      <button class="filter-btn" data-day="jumat">Jumat</button>
+      <button class="filter-btn" data-day="sabtu">Sabtu</button>
+      <button class="filter-btn" data-day="minggu">Minggu</button>
+    </div>
+  </div>
+
+  <!-- ===================== SCHEDULE KELAS A ===================== -->
+  <main class="schedule-section" id="schedule-A">
+
+    <!-- SENIN -->
+    <div class="day-block" data-day="senin">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#5b8cff,#3730a3)"></span>
+          <h2>Senin</h2>
+        </div>
+        <span class="day-count">2 Mata Kuliah · Sesi 7–12</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S7–9</span><span class="time-range">12.00 – 14.00</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pengantar Akuntansi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Nurianah, S.E., M.A</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>209</span>
+          </div>
+          <div class="session-bar" style="--color:#5b8cff"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S10–12</span><span class="time-range">14.00 – 16.00</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Perancangan Basis Data <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Arbiati Faizah, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Lab. Komputer</span>
+          </div>
+          <div class="session-bar" style="--color:#5b8cff"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RABU -->
+    <div class="day-block" data-day="rabu">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#7c3aed,#a78bfa)"></span>
+          <h2>Rabu</h2>
+        </div>
+        <span class="day-count">3 Mata Kuliah · Sesi 5–11</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S5–6</span><span class="time-range">10.10 – 11.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Etika Profesi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 2 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Langgeng Pravitno Utomo, SE., MSA</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>209</span>
+          </div>
+          <div class="session-bar" style="--color:#7c3aed"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S7–9</span><span class="time-range">12.00 – 14.00</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Analisa dan Perancangan Sistem Informasi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Arbiati Faizah, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>209</span>
+          </div>
+          <div class="session-bar" style="--color:#7c3aed"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.15s">
+          <div class="session-time"><span class="sesi-num">S10–11</span><span class="time-range">14.00 – 15.20</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Ke-PGRI-an <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 2 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Irea Arrahima, S.E., MM</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>209</span>
+          </div>
+          <div class="session-bar" style="--color:#7c3aed"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- KAMIS -->
+    <div class="day-block" data-day="kamis">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#10b981,#059669)"></span>
+          <h2>Kamis</h2>
+        </div>
+        <span class="day-count">1 Mata Kuliah · Sesi 5–6</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S5–6</span><span class="time-range">10.10 – 11.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pancasila <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 2 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Muhammad Amanulloh Mz, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>208</span>
+          </div>
+          <div class="session-bar" style="--color:#10b981"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SABTU -->
+    <div class="day-block" data-day="sabtu">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#f59e0b,#ef4444)"></span>
+          <h2>Sabtu</h2>
+        </div>
+        <span class="day-count">2 Mata Kuliah · Sesi 1–6</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S1–3</span><span class="time-range">07.30 – 09.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Jaringan Komputer <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Sugianto, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>207</span>
+          </div>
+          <div class="session-bar" style="--color:#f59e0b"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S4–6</span><span class="time-range">09.30 – 11.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pemrograman Berorientasi Objek <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Syaiful Imron, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Lab. Komputer</span>
+          </div>
+          <div class="session-bar" style="--color:#ef4444"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===================== SCHEDULE KELAS B ===================== -->
+  <main class="schedule-section" id="schedule-B" style="display:none">
+
+    <!-- JUMAT -->
+    <div class="day-block" data-day="jumat">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#3b82f6,#10b981)"></span>
+          <h2>Jumat</h2>
+        </div>
+        <span class="day-count">3 Mata Kuliah · Sesi 1–5</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S1–2</span><span class="time-range">18.00 – 18.50</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Etika Profesi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 2 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Muhammad Amanulloh Mz, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#3b82f6"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S3</span><span class="time-range">18.50 – 19.15</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pancasila <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 1 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Muhammad Amanulloh Mz, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#3b82f6"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.15s">
+          <div class="session-time"><span class="sesi-num">S4–5</span><span class="time-range">19.15 – 20.05</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Ke-PGRI-an <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 2 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Irea Arrahima, S.E., MM</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#10b981"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SABTU -->
+    <div class="day-block" data-day="sabtu">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#f59e0b,#ef4444)"></span>
+          <h2>Sabtu</h2>
+        </div>
+        <span class="day-count">2 Mata Kuliah · Sesi 1–6</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S1–3</span><span class="time-range">18.00 – 19.15</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pengantar Akuntansi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Nurianah, S.E., M.A</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#f59e0b"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S4–6</span><span class="time-range">19.15 – 20.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Analisa dan Perancangan Sistem Informasi <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Arbiati Faizah, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#ef4444"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MINGGU -->
+    <div class="day-block" data-day="minggu">
+      <div class="day-header">
+        <div class="day-label">
+          <span class="day-dot" style="background: linear-gradient(135deg,#ec4899,#8b5cf6)"></span>
+          <h2>Minggu</h2>
+        </div>
+        <span class="day-count">3 Mata Kuliah · Sesi 1–9</span>
+      </div>
+      <div class="schedule-grid">
+
+        <div class="session-card" style="--delay:0.05s">
+          <div class="session-time"><span class="sesi-num">S1–3</span><span class="time-range">08.00 – 09.30</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Pemrograman Berorientasi Objek <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Syaiful Imron, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>R. Sidang Mnj</span>
+          </div>
+          <div class="session-bar" style="--color:#ec4899"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.1s">
+          <div class="session-time"><span class="sesi-num">S4–6</span><span class="time-range">09.30 – 11.00</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Perancangan Basis Data <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Arbiati Faizah, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Lab. Komputer</span>
+          </div>
+          <div class="session-bar" style="--color:#8b5cf6"></div>
+        </div>
+
+        <div class="session-card" style="--delay:0.15s">
+          <div class="session-time"><span class="sesi-num">S7–9</span><span class="time-range">11.00 – 13.00</span></div>
+          <div class="session-info">
+            <h3 class="matkul-name">Jaringan Komputer <span style="font-weight:400;color:var(--muted);font-size:0.72rem;">· 3 SKS</span></h3>
+            <p class="dosen-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Sugianto, S.Kom, M.Kom</p>
+            <span class="room-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Lab. Komputer</span>
+          </div>
+          <div class="session-bar" style="--color:#8b5cf6"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- INFO SECTION -->
+  <section class="info-section">
+    <h2 class="info-title">Keterangan Jadwal</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📌</div>
+        <p>Kelas A merupakan reguler pagi/siang; Kelas B merupakan reguler malam/akhir pekan. Seluruh sesi tatap muka teori Kelas B bertempat di <strong>Ruang Sidang Manajemen</strong>.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💻</div>
+        <p>Perkuliahan praktikum (<strong>Perancangan Basis Data, Jaringan Komputer</strong> &amp; <strong>Pemrograman Berorientasi Objek</strong>) dilaksanakan di <strong class="text-online">Lab. Komputer</strong>.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">✅</div>
+        <p>Mahasiswa wajib memenuhi persentase kehadiran minimal <strong>75%</strong> untuk dapat mengikuti Ujian Akhir Semester (UAS).</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">⏱️</div>
+        <p>Toleransi keterlambatan maksimal <strong>15 menit</strong> dari jadwal perkuliahan yang telah ditetapkan.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🔔</div>
+        <p>Perpindahan jadwal dan penggunaan ruang kelas di luar jadwal wajib melapor ke Sekretariat Program Studi.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📱</div>
+        <p>Perubahan Jadwal hubungi WA: <strong>+62 815-4712-0896</strong></p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🏛️</div>
+        <p>Status Jadwal: <strong>Resmi / Verifikasi</strong> — S1 Sistem dan Teknologi Informasi, ITEBIS PGRI Dewantara Jombang.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="logo-sti.jpeg" alt="Logo STI" class="footer-logo" />
+      <div>
+        <p class="footer-name">Prodi Sistem Teknologi Informasi</p>
+        <p class="footer-inst">Institut Teknologi dan Bisnis PGRI Dewantara Jombang</p>
+      </div>
+      <p class="footer-copy">© 2026 STI ITEBIS PGRI Dewantara</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
